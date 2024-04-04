@@ -25,33 +25,41 @@ void input() {
     }
 }
 
-void LinearSearch() {
+void LinearSearch()
+{
     char ch;
-    int ctr; //Number of comparisons
+    int ctr; //number of comparions
     int item;
 
-    do {
-        //accept thhe number to be searched
+    do
+    {
+        //accept the number to be searched
         cout << "\nEnter the element you want to search: "; //step 1
         cin >> item;
 
         ctr = 0;
-        i = 0; //step 2 
+        i = 0; //step 2
         while (i < n) //step 3
         {
             ctr++;
-            if (arr[i] == item) {
+            if (arr[i] == item)
+            {
                 cout << "\n" << item << " found at position " << (i + 1) << endl; //step 6
                 break;
             }
-            i++ //step 4
+            i++; //step 4
         }
 
-        if (i==n) //step 5
+        if (i == n) //step 5
+            cout << "\n" << item << " not found in the array\n";
+        cout << "\nNumber of comparions: " << ctr << endl;
 
+        cout << "\nContinue search (y/n): ";
+        cin >> ch;
 
-    } while ()
+    } while ((ch == 'y') || (ch == 'Y'));
 }
+
 
 
 int main()
